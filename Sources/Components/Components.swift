@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// Deep-teal high-contrast CTA used for subscription + primary actions. 56pt, thumb-friendly.
 struct PrimaryButton: View {
@@ -58,11 +59,12 @@ struct TagBadge: View {
     }
 }
 
-/// Gradient artwork stand-in for content thumbnails (keeps the POC self-contained,
-/// no bundled photo assets). Seeded per-item so cards look distinct + stable.
+/// Content thumbnail. Shows the bundled photo (matching the Stitch design); falls back to a
+/// seeded gradient + SF Symbol when no image name is provided or the asset is missing.
 struct Artwork: View {
     let seed: Int
     var icon: String = "photo"
+    var imageName: String? = nil
 
     private var colors: [Color] {
         let palettes: [[Color]] = [
@@ -74,13 +76,23 @@ struct Artwork: View {
         return palettes[abs(seed) % palettes.count]
     }
 
-    var body: some View {
+    @ViewBuilder private var gradient: some View {
         LinearGradient(colors: colors, startPoint: .topLeading, endPoint: .bottomTrailing)
             .overlay(
                 Image(systemName: icon)
                     .font(.system(size: 34, weight: .semibold))
                     .foregroundStyle(.white.opacity(0.85))
             )
+    }
+
+    var body: some View {
+        if let imageName, UIImage(named: imageName) != nil {
+            Image(imageName)
+                .resizable()
+                .scaledToFill()
+        } else {
+            gradient
+        }
     }
 }
 

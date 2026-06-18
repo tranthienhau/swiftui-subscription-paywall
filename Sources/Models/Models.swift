@@ -29,6 +29,7 @@ struct ContentItem: Identifiable, Hashable {
     let isPremium: Bool
     let artSeed: Int
     let icon: String
+    let imageName: String     // bundled photo (matches the Stitch design)
     var progress: Double = 0  // 0...1 for "continue watching"
     let lessons: [Lesson]
 
@@ -55,49 +56,49 @@ enum MockData {
             title: "Morning Mindfulness Rituals", author: "Sarah Jenkins",
             category: .wellness, kind: "Workshop", duration: "45 min", meta: "4K",
             summary: "Start your day with intention. This premium workshop guided by Sarah Jenkins walks you through a transformative morning sequence designed to ground your energy and clarify your focus for the day ahead.",
-            isPremium: true, artSeed: 0, icon: "figure.mind.and.body",
+            isPremium: true, artSeed: 0, icon: "figure.mind.and.body", imageName: "meditation",
             progress: 0, lessons: standardLessons()),
         ContentItem(
             title: "Gourmet Plant Basics", author: "Chef Julian",
             category: .wellness, kind: "Workshop", duration: "60 min", meta: "12 Lessons",
             summary: "A hands-on culinary series turning everyday produce into restaurant-grade plates, taught by Chef Julian.",
-            isPremium: true, artSeed: 1, icon: "leaf.fill",
+            isPremium: true, artSeed: 1, icon: "leaf.fill", imageName: "food",
             progress: 0, lessons: standardLessons()),
         ContentItem(
             title: "Modern Interiors", author: "Design Studio",
             category: .creativity, kind: "Workshop", duration: "40 min", meta: "8 Lessons",
             summary: "Reimagine your living space with light, texture and intentional negative space.",
-            isPremium: true, artSeed: 2, icon: "house.fill",
+            isPremium: true, artSeed: 2, icon: "house.fill", imageName: "chairInterior",
             progress: 0, lessons: standardLessons()),
         ContentItem(
             title: "Visual Storytelling", author: "Mark Ellis",
             category: .creativity, kind: "Video", duration: "35 min", meta: "Audio Only",
             summary: "Frame, light and compose images that move people. A practical photography masterclass.",
-            isPremium: true, artSeed: 3, icon: "camera.fill",
+            isPremium: true, artSeed: 3, icon: "camera.fill", imageName: "camera",
             progress: 0.75, lessons: standardLessons()),
         ContentItem(
             title: "Leading with Empathy", author: "Dr. Naomi Cole",
             category: .leadership, kind: "Audio", duration: "25 min", meta: "Audio Only",
             summary: "Build trust and psychological safety on your team through empathetic leadership habits.",
-            isPremium: false, artSeed: 1, icon: "person.2.fill",
+            isPremium: false, artSeed: 1, icon: "person.2.fill", imageName: "portraitWoman",
             progress: 0, lessons: standardLessons()),
         ContentItem(
             title: "Functional Strength 101", author: "Coach Reyes",
             category: .performance, kind: "Video", duration: "40 min", meta: "HD Video",
             summary: "A progressive bodyweight program that builds real-world strength without a gym.",
-            isPremium: true, artSeed: 2, icon: "figure.strengthtraining.functional",
+            isPremium: true, artSeed: 2, icon: "figure.strengthtraining.functional", imageName: "sunsetWindow",
             progress: 0, lessons: standardLessons()),
         ContentItem(
             title: "Quiet Focus Mastery", author: "Sarah Jenkins",
             category: .wellness, kind: "Workshop", duration: "30 min", meta: "6 Lessons",
             summary: "Train deep concentration and reclaim your attention in a distracted world.",
-            isPremium: true, artSeed: 0, icon: "brain.head.profile",
+            isPremium: true, artSeed: 0, icon: "brain.head.profile", imageName: "laptop",
             progress: 0, lessons: standardLessons()),
         ContentItem(
             title: "Empathetic Strategy", author: "Dr. Naomi Cole",
             category: .leadership, kind: "Article", duration: "12 min", meta: "Article",
             summary: "Align team strategy with human needs - a framework for compassionate decision making.",
-            isPremium: false, artSeed: 3, icon: "lightbulb.fill",
+            isPremium: false, artSeed: 3, icon: "lightbulb.fill", imageName: "businessWoman",
             progress: 0, lessons: standardLessons()),
     ]
 }

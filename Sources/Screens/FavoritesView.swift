@@ -73,7 +73,7 @@ private struct FavoriteHero: View {
     var body: some View {
         VStack(alignment: .leading, spacing: Theme.Space.sm) {
             ZStack(alignment: .topTrailing) {
-                Artwork(seed: item.artSeed, icon: item.icon).frame(height: 170)
+                Artwork(seed: item.artSeed, icon: item.icon, imageName: item.imageName).frame(height: 170)
                 heartBadge(isFav).padding(Theme.Space.sm)
             }
             .clipShape(.rect(cornerRadius: Theme.Radius.card))
@@ -89,7 +89,7 @@ private struct FavoriteCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: Theme.Space.xs) {
             ZStack(alignment: .topTrailing) {
-                Artwork(seed: item.artSeed, icon: item.icon).frame(height: 110)
+                Artwork(seed: item.artSeed, icon: item.icon, imageName: item.imageName).frame(height: 110)
                 heartBadge(true).padding(6)
             }
             .clipShape(.rect(cornerRadius: Theme.Radius.button))

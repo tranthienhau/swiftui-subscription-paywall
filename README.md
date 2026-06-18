@@ -47,8 +47,9 @@ optimistic premium-lifestyle system). The design source (HTML + tokens) lives in
 - **Navigation**: `NavigationStack` + type-safe `navigationDestination(for:)`; new `Tab` API.
 - **Design system**: `Theme` (colors, typography, spacing, radii, shadows) ported 1:1 from
   the Stitch `DESIGN.md` tokens; reusable `Components` (CTA button, chips, badges, artwork).
-- Content thumbnails are gradient + SF Symbol artwork so the repo stays self-contained
-  (no bundled photo assets) and renders identically on any machine.
+- Photography matches the Stitch design - the design's images are bundled in
+  `Assets.xcassets` and mapped per content item, with a seeded gradient + SF Symbol fallback
+  if an asset is missing.
 
 ```
 Sources/

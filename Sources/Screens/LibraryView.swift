@@ -139,7 +139,7 @@ private struct FeaturedCard: View {
     let item: ContentItem
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            Artwork(seed: item.artSeed, icon: item.icon).frame(height: 180)
+            Artwork(seed: item.artSeed, icon: item.icon, imageName: item.imageName).frame(height: 180)
             LinearGradient(colors: [.clear, .black.opacity(0.55)],
                            startPoint: .center, endPoint: .bottom)
             VStack(alignment: .leading, spacing: 2) {
@@ -165,7 +165,7 @@ private struct GridCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: Theme.Space.xs) {
             ZStack(alignment: .topTrailing) {
-                Artwork(seed: item.artSeed, icon: item.icon).frame(height: 110)
+                Artwork(seed: item.artSeed, icon: item.icon, imageName: item.imageName).frame(height: 110)
                 if item.isPremium { LockBadge().padding(6) }
             }
             .clipShape(.rect(cornerRadius: Theme.Radius.button))
@@ -183,7 +183,7 @@ private struct ContinueCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: Theme.Space.xs) {
             ZStack(alignment: .topLeading) {
-                Artwork(seed: item.artSeed, icon: item.icon).frame(width: 220, height: 120)
+                Artwork(seed: item.artSeed, icon: item.icon, imageName: item.imageName).frame(width: 220, height: 120)
                 TagBadge(text: "Continue", tint: Theme.Palette.secondary).padding(8)
             }
             .clipShape(.rect(cornerRadius: Theme.Radius.button))
@@ -200,7 +200,7 @@ private struct RowCard: View {
     let item: ContentItem
     var body: some View {
         HStack(spacing: Theme.Space.md) {
-            Artwork(seed: item.artSeed, icon: item.icon)
+            Artwork(seed: item.artSeed, icon: item.icon, imageName: item.imageName)
                 .frame(width: 64, height: 64)
                 .clipShape(.rect(cornerRadius: Theme.Radius.chip))
             VStack(alignment: .leading, spacing: 4) {

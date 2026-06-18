@@ -40,7 +40,7 @@ struct ContentDetailView: View {
 
     private var player: some View {
         ZStack {
-            Artwork(seed: item.artSeed, icon: item.icon).frame(height: 200)
+            Artwork(seed: item.artSeed, icon: item.icon, imageName: item.imageName).frame(height: 200)
             Image(systemName: locked ? "lock.fill" : "play.fill")
                 .font(.system(size: 26, weight: .bold))
                 .foregroundStyle(Theme.Palette.onSurface)
@@ -119,7 +119,7 @@ struct ContentDetailView: View {
         VStack(alignment: .leading, spacing: Theme.Space.md) {
             Text("Daily Inspiration").font(.headlineMd).foregroundStyle(Theme.Palette.onSurface)
             ZStack(alignment: .bottomLeading) {
-                Artwork(seed: 3, icon: "cup.and.saucer.fill").frame(height: 120)
+                Artwork(seed: 3, icon: "cup.and.saucer.fill", imageName: "tea").frame(height: 120)
                 LinearGradient(colors: [.clear, .black.opacity(0.5)], startPoint: .center, endPoint: .bottom)
                 VStack(alignment: .leading, spacing: 2) {
                     Text("ARTICLE").font(.labelLg).foregroundStyle(Theme.Palette.primaryContainer)

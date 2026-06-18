@@ -53,7 +53,7 @@ struct PaywallView: View {
 
     private var hero: some View {
         ZStack(alignment: .topLeading) {
-            Artwork(seed: 2, icon: "books.vertical.fill")
+            Artwork(seed: 2, icon: "books.vertical.fill", imageName: "plantInterior")
                 .frame(height: 180)
                 .clipShape(.rect(cornerRadius: Theme.Radius.card))
             TagBadge(text: "★ Premium Access", tint: Theme.Palette.onSurface)

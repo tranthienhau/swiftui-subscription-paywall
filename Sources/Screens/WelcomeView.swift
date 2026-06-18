@@ -40,7 +40,7 @@ struct WelcomeView: View {
 
     private var videoCard: some View {
         ZStack(alignment: .topTrailing) {
-            Artwork(seed: 0, icon: "leaf.fill")
+            Artwork(seed: 0, icon: "leaf.fill", imageName: "interiorWindow")
                 .frame(height: 200)
                 .clipShape(.rect(cornerRadius: Theme.Radius.card))
             TagBadge(text: "Intro", tint: Theme.Palette.secondary)

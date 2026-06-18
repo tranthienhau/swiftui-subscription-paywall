@@ -42,8 +42,11 @@ struct SettingsView: View {
 
     private var profile: some View {
         VStack(spacing: Theme.Space.xs) {
-            Image(systemName: "person.crop.circle.fill")
-                .font(.system(size: 84)).foregroundStyle(Theme.Palette.secondaryContainer)
+            Image("avatar")
+                .resizable().scaledToFill()
+                .frame(width: 96, height: 96)
+                .clipShape(.circle)
+                .overlay(Circle().stroke(Theme.Palette.primaryContainer, lineWidth: 3))
             Text("Alex Rivera").font(.headlineMd).foregroundStyle(Theme.Palette.onSurface)
             Text("alex.rivera@premium.com").font(.bodyLg).foregroundStyle(Theme.Palette.onSurfaceVariant)
         }

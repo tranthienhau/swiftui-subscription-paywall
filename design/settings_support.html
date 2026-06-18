@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings - Premium Content</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#271900",
+                        "surface-container": "#f1ede7",
+                        "tertiary-fixed": "#a6eff3",
+                        "primary-fixed": "#ffdea8",
+                        "background": "#fdf9f3",
+                        "surface-container-high": "#ebe8e2",
+                        "primary-container": "#ffb800",
+                        "inverse-surface": "#31302d",
+                        "surface-tint": "#7c5800",
+                        "on-secondary-container": "#6e1500",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e6e2dc",
+                        "on-background": "#1c1c18",
+                        "surface-dim": "#dddad4",
+                        "on-secondary-fixed-variant": "#862208",
+                        "on-tertiary-fixed-variant": "#004f53",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#005b5f",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1c1c18",
+                        "surface-container-highest": "#e6e2dc",
+                        "tertiary-container": "#89d1d5",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#6b4c00",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#5e4200",
+                        "tertiary-fixed-dim": "#8ad3d7",
+                        "inverse-on-surface": "#f4f0ea",
+                        "primary": "#7c5800",
+                        "surface-container-low": "#f7f3ed",
+                        "primary-fixed-dim": "#ffba20",
+                        "on-secondary-fixed": "#3c0700",
+                        "secondary": "#a7391e",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#15686c",
+                        "inverse-primary": "#ffba20",
+                        "outline": "#837560",
+                        "surface": "#fdf9f3",
+                        "surface-bright": "#fdf9f3",
+                        "secondary-container": "#fd7958",
+                        "secondary-fixed": "#ffdad2",
+                        "on-surface-variant": "#514532",
+                        "outline-variant": "#d5c4ab",
+                        "secondary-fixed-dim": "#ffb4a2",
+                        "on-tertiary-fixed": "#002021"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "12px",
+                        "2xl": "24px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "lg": "24px",
+                        "gutter-mobile": "16px",
+                        "xs": "8px",
+                        "md": "16px",
+                        "margin-mobile": "20px",
+                        "xl": "32px",
+                        "xxl": "48px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "display": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "callout": ["Inter"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Header / TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-surface/80 ios-blur shadow-[0_4px_20px_0_rgba(255,184,0,0.05)]">
+<div class="flex justify-between items-center px-margin-mobile py-sm w-full">
+<button class="text-primary hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-on-surface">Settings</h1>
+<div class="w-10"></div> <!-- Spacer for balance -->
+</div>
+</header>
+<main class="max-w-md mx-auto px-margin-mobile pt-lg pb-xxl space-y-xl">
+<!-- Profile Summary Header -->
+<section class="flex flex-col items-center text-center space-y-md animate-in fade-in slide-in-from-bottom-4 duration-700">
+<div class="relative">
+<div class="w-24 h-24 rounded-full overflow-hidden border-4 border-surface-container-highest shadow-lg bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A warm, professional headshot of a friendly individual for a premium lifestyle app profile. The lighting is soft and natural, emphasizing a sun-drenched, high-end aesthetic. The background is a clean, minimalist interior with warm wood tones and soft cream colors, maintaining a serene and welcoming brand personality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfAdf-h8KQQwXW6OpLHdwaxIuFlySfmJWlnObB1vrIZ2V44BUr81ebHrB6FJtiYK06FVXuht1GTflbhh2BryZbseC1w3DAvruoix0cUpNnwz6c1U9WNKvhfq5bla-R9OEv4r7__1RMKF7gWqo0f7ivFJ56fszTXp-0Aj0pIHp6CQwuWBYnRgEWsWEgvmU2cd5eE9AyvyG_knS3IVODDM9ev0sZs1FO26Pn6XlWoxOCKMMvymxF7mW-K3rQQFWCJRZ-uEZZMGh1rp0"/>
+</div>
+<div class="absolute bottom-0 right-0 bg-primary text-on-primary p-2 rounded-full border-2 border-background shadow-md flex items-center justify-center">
+<span class="material-symbols-outlined !text-[18px]" data-icon="edit">edit</span>
+</div>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Alex Rivera</h2>
+<p class="font-body-md text-on-surface-variant">alex.rivera@premium.com</p>
+</div>
+</section>
+<!-- Account Section -->
+<section class="space-y-sm">
+<h3 class="px-base font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant">Account</h3>
+<div class="bg-surface-container-lowest rounded-2xl shadow-[0_4px_20px_0_rgba(255,184,0,0.05)] overflow-hidden border border-outline-variant/30">
+<button class="w-full flex items-center justify-between p-md hover:bg-surface-variant/20 transition-colors active:scale-[0.99] duration-150">
+<div class="flex items-center space-x-md">
+<div class="w-10 h-10 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+<span class="font-callout text-callout">Personal Information</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right">chevron_right</span>
+</button>
+<div class="h-[1px] bg-outline-variant/20 ml-14"></div>
+<button class="w-full flex items-center justify-between p-md hover:bg-surface-variant/20 transition-colors active:scale-[0.99] duration-150">
+<div class="flex items-center space-x-md">
+<div class="w-10 h-10 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+</div>
+<span class="font-callout text-callout">Password &amp; Security</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right">chevron_right</span>
+</button>
+<div class="h-[1px] bg-outline-variant/20 ml-14"></div>
+<button class="w-full flex items-center justify-between p-md hover:bg-surface-variant/20 transition-colors active:scale-[0.99] duration-150">
+<div class="flex items-center space-x-md">
+<div class="w-10 h-10 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</div>
+<span class="font-callout text-callout">Notification Settings</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Subscription Section -->
+<section class="space-y-sm">
+<h3 class="px-base font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant">Subscription</h3>
+<div class="bg-surface-container-lowest rounded-2xl shadow-[0_4px_20px_0_rgba(255,184,0,0.05)] overflow-hidden border border-outline-variant/30">
+<!-- Pro Badge Feature Card -->
+<div class="p-md bg-gradient-to-br from-primary-container/30 to-background flex items-center justify-between">
+<div class="flex items-center space-x-md">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div>
+<p class="font-callout text-callout">Premium Plan</p>
+<p class="text-xs text-on-primary-container/70 font-medium">Active until Dec 2024</p>
+</div>
+</div>
+<div class="bg-primary text-on-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tighter">Pro</div>
+</div>
+<div class="h-[1px] bg-outline-variant/20"></div>
+<button class="w-full flex items-center justify-between p-md hover:bg-surface-variant/20 transition-colors active:scale-[0.99] duration-150">
+<div class="flex items-center space-x-md">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="credit_card">credit_card</span>
+</div>
+<span class="font-callout text-callout">Manage Plan</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right">chevron_right</span>
+</button>
+<div class="h-[1px] bg-outline-variant/20 ml-14"></div>
+<button class="w-full flex items-center justify-between p-md hover:bg-surface-variant/20 transition-colors active:scale-[0.99] duration-150">
+<div class="flex items-center space-x-md">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</div>
+<span class="font-callout text-callout">Restore Purchases</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Support Section -->
+<section class="space-y-sm">
+<h3 class="px-base font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant">Support</h3>
+<div class="bg-surface-container-lowest rounded-2xl shadow-[0_4px_20px_0_rgba(255,184,0,0.05)] overflow-hidden border border-outline-variant/30">
+<button class="w-full flex items-center justify-between p-md hover:bg-surface-variant/20 transition-colors active:scale-[0.99] duration-150">
+<div class="flex items-center space-x-md">
+<div class="w-10 h-10 rounded-xl bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+</div>
+<span class="font-callout text-callout">Contact Support</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right">chevron_right</span>
+</button>
+<div class="h-[1px] bg-outline-variant/20 ml-14"></div>
+<button class="w-full flex items-center justify-between p-md hover:bg-surface-variant/20 transition-colors active:scale-[0.99] duration-150">
+<div class="flex items-center space-x-md">
+<div class="w-10 h-10 rounded-xl bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+</div>
+<span class="font-callout text-callout">Terms of Service</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right">chevron_right</span>
+</button>
+<div class="h-[1px] bg-outline-variant/20 ml-14"></div>
+<button class="w-full flex items-center justify-between p-md hover:bg-surface-variant/20 transition-colors active:scale-[0.99] duration-150">
+<div class="flex items-center space-x-md">
+<div class="w-10 h-10 rounded-xl bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="privacy_tip">privacy_tip</span>
+</div>
+<span class="font-callout text-callout">Privacy Policy</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Sign Out Button -->
+<section class="pt-md pb-xl">
+<button class="w-full h-14 bg-surface-container rounded-2xl text-error font-headline-md flex items-center justify-center space-x-sm hover:bg-error/5 transition-all active:scale-95 duration-200 border border-error/10">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Sign Out</span>
+</button>
+<p class="text-center mt-gutter-mobile text-on-surface-variant font-label-md">Version 2.4.1 (Gold)</p>
+</section>
+</main>
+<!-- Bottom Navigation Bar (as per predicted components) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface-container-lowest shadow-[0_-8px_30px_0_rgba(255,184,0,0.10)] rounded-t-xl border-t border-outline-variant">
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant transition-colors active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="video_library">video_library</span>
+<span class="font-label-md text-label-md">Library</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant transition-colors active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="font-label-md text-label-md">Favorites</span>
+</button>
+<!-- ACTIVE STATE FOR SETTINGS -->
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</button>
+</nav>
+<!-- Interaction Script -->
+<script>
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Subtle haptic-like effect logic would go here
+            });
+        });
+        
+        // Handle scroll behavior for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

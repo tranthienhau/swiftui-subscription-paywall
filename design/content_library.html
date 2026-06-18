@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Premium Content Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#271900",
+                    "surface-container": "#f1ede7",
+                    "tertiary-fixed": "#a6eff3",
+                    "primary-fixed": "#ffdea8",
+                    "background": "#fdf9f3",
+                    "surface-container-high": "#ebe8e2",
+                    "primary-container": "#ffb800",
+                    "inverse-surface": "#31302d",
+                    "surface-tint": "#7c5800",
+                    "on-secondary-container": "#6e1500",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e6e2dc",
+                    "on-background": "#1c1c18",
+                    "surface-dim": "#dddad4",
+                    "on-secondary-fixed-variant": "#862208",
+                    "on-tertiary-fixed-variant": "#004f53",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#005b5f",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1c1c18",
+                    "surface-container-highest": "#e6e2dc",
+                    "tertiary-container": "#89d1d5",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#6b4c00",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#5e4200",
+                    "tertiary-fixed-dim": "#8ad3d7",
+                    "inverse-on-surface": "#f4f0ea",
+                    "primary": "#7c5800",
+                    "surface-container-low": "#f7f3ed",
+                    "primary-fixed-dim": "#ffba20",
+                    "on-secondary-fixed": "#3c0700",
+                    "secondary": "#a7391e",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#15686c",
+                    "inverse-primary": "#ffba20",
+                    "outline": "#837560",
+                    "surface": "#fdf9f3",
+                    "surface-bright": "#fdf9f3",
+                    "secondary-container": "#fd7958",
+                    "secondary-fixed": "#ffdad2",
+                    "on-surface-variant": "#514532",
+                    "outline-variant": "#d5c4ab",
+                    "secondary-fixed-dim": "#ffb4a2",
+                    "on-tertiary-fixed": "#002021"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "xxl": "24px",
+                    "pill": "32px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "lg": "24px",
+                    "gutter-mobile": "16px",
+                    "xs": "8px",
+                    "md": "16px",
+                    "margin-mobile": "20px",
+                    "xl": "32px",
+                    "xxl": "48px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "display": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "callout": ["Inter"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "display": ["34px", {"lineHeight": "41px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["17px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-md": ["15px", {"lineHeight": "21px", "fontWeight": "400"}],
+                    "label-lg": ["13px", {"lineHeight": "18px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "callout": ["16px", {"lineHeight": "21px", "fontWeight": "600"}],
+                    "headline-lg": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fdf9f3;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .sun-kissed-shadow {
+            box-shadow: 0 4px 20px 0 rgba(255, 184, 0, 0.05);
+        }
+        .sun-kissed-shadow-lg {
+            box-shadow: 0 8px 30px 0 rgba(255, 184, 0, 0.10);
+        }
+        .glass-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-40 bg-surface flex justify-between items-center px-margin-mobile py-sm shadow-[0_4px_20px_0_rgba(255,184,0,0.05)]">
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity active:scale-95 duration-200">arrow_back</button>
+<h1 class="font-display text-display font-extrabold text-primary">Premium Content</h1>
+</div>
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity active:scale-95 duration-200" style="font-variation-settings: 'FILL' 1;">account_circle</button>
+</header>
+<main class="pb-32">
+<!-- Hero Search & Atmospheric Background -->
+<section class="relative px-margin-mobile pt-lg pb-xl overflow-hidden">
+<div class="absolute inset-0 z-0">
+
+</div>
+<div class="relative z-10 space-y-lg">
+<div class="space-y-xs">
+<p class="font-label-lg text-secondary uppercase tracking-widest">Discovery</p>
+<h2 class="font-headline-lg text-on-background">Explore Your Library</h2>
+</div>
+<!-- Search Input -->
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full h-14 pl-12 pr-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary-container transition-all text-body-md placeholder:text-outline-variant" placeholder="Search masterclasses..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Categories horizontal scroll -->
+<nav class="px-margin-mobile mb-xl overflow-x-auto no-scrollbar flex gap-sm items-center">
+<button class="px-lg py-2.5 rounded-full bg-primary text-on-primary font-label-lg whitespace-nowrap shadow-sm transition-all active:scale-95">Featured</button>
+<button class="px-lg py-2.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg whitespace-nowrap hover:bg-surface-variant transition-colors active:scale-95">New Releases</button>
+<button class="px-lg py-2.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg whitespace-nowrap hover:bg-surface-variant transition-colors active:scale-95">Most Popular</button>
+<button class="px-lg py-2.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg whitespace-nowrap hover:bg-surface-variant transition-colors active:scale-95">Shorts</button>
+</nav>
+<!-- Featured Bento Grid -->
+<section class="px-margin-mobile space-y-md mb-xxl">
+<div class="flex justify-between items-end mb-sm">
+<h3 class="font-headline-md text-on-surface">Curated Picks</h3>
+<button class="font-label-lg text-primary flex items-center gap-1">View all <span class="material-symbols-outlined text-[16px]">chevron_right</span></button>
+</div>
+<div class="grid grid-cols-2 gap-md">
+<!-- Large Feature Card -->
+<div class="col-span-2 relative h-64 rounded-xxl overflow-hidden sun-kissed-shadow group cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A cinematic, high-end photography shot of a serene meditation space with soft morning sunlight streaming through large windows. The aesthetic is clean, minimalist, and luxury lifestyle, featuring warm golden tones and soft shadows. High-quality textures and a peaceful atmosphere consistent with a premium content platform." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKL1ChgRm_JUEvqhhJQszkpyJ9Zed6TMXP5DY8huNJeHik-kpSGYTL9SQvtsmt_xZNOI4X_FsUkG6WgbbSQfeE9s3rnSF3FhlDD06YeaDik8KmpmnzwIm-BiVewI11dZEmnpryI4rlA4lE5DirVyjMRbOjFyjBbL4xfNJDWPkrZ03dFaeuq55KY2JEZKKXs_HDJ2D-Fl2lI4R0W2-CpS0Gwss0F5-AbxCVXK8KihEME3SgpGvXgODCMqLMuhIGksKglVlmKtCsd_U')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4 bg-primary-container/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-on-primary-container" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span class="text-[10px] font-bold text-on-primary-container uppercase tracking-tight">Premium</span>
+</div>
+<div class="absolute bottom-6 left-6 right-6">
+<p class="font-label-lg text-primary-fixed-dim mb-1">Wellness • 45 min</p>
+<h4 class="font-headline-md text-white">Morning Mindfulness Rituals</h4>
+</div>
+</div>
+<!-- Small Grid Card 1 -->
+<div class="rounded-xxl bg-surface-container-low border border-outline-variant/30 overflow-hidden sun-kissed-shadow flex flex-col hover:border-primary-container transition-colors cursor-pointer">
+<div class="relative h-32">
+<img class="w-full h-full object-cover" data-alt="A professional top-down culinary shot of vibrant, fresh organic ingredients artistically arranged on a light stone surface. Soft, high-key lighting creates an optimistic and healthy feel. The colors are rich and natural, following a premium lifestyle aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACqDzAcbssZNpdvSuRJXZ6acH_f0tfKPPSCz_cq4HTEoN2zFKI0W9129N9NtnepgZvnp9qvKWQEhK3iGLObXpclmSqfIZCV6U5wyE25Xhemn848-OsIy9vfqyUych87J3ZA3EkAS96dPy34yqYLYMXjw9gEd4NC-cV_l-jirMqiX9VG7o9y2kichno5VlM78yfyqRvFeIRVRgbUguZyTa3gl-3zXNxQeFFO6a4bTHSkxLlvX2ZoKeDtdJ5AbrvgMrRezWGdlCbK_o"/>
+<div class="absolute top-2 right-2 bg-white/80 backdrop-blur-sm p-1 rounded-full">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+</div>
+<div class="p-md space-y-1">
+<h5 class="font-callout text-on-surface line-clamp-1">Gourmet Essentials</h5>
+<p class="text-[11px] text-on-surface-variant font-medium">Chef Julian • 12 Lessons</p>
+</div>
+</div>
+<!-- Small Grid Card 2 -->
+<div class="rounded-xxl bg-surface-container-low border border-outline-variant/30 overflow-hidden sun-kissed-shadow flex flex-col hover:border-primary-container transition-colors cursor-pointer">
+<div class="relative h-32">
+<img class="w-full h-full object-cover" data-alt="An elegant, minimalist interior design setup featuring a designer chair and a large architectural plant in a sun-drenched modern apartment. Bright, airy composition with warm wood tones and soft white textures. High-end lifestyle photography for a design masterclass." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWY9u7G8HLrXJXS4ief8J7FiLdPdKOjW-bqZzLI-d5kKn1wcyTDaUX7CYXNREHisxvBIx3K5yGhbpH5K4ZHQ_OkiC8jZyXNTp79unFPQaTcTVcNhQPJKWVp_jblQUomiUAJ0femwc7PTAIiAjqt2J9nzCX_z4WOkJ6qtHA7cYphjq7lzY_RKu9vbHbRpmecdKKUBJ507PgMsz9H_qjoHXDftxXylJncZB9Y9oA83fK7Vae0aNAojCoGVs0j8WQ1gY_jOmp6e1cQrM"/>
+<div class="absolute top-2 right-2 bg-white/80 backdrop-blur-sm p-1 rounded-full">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+</div>
+<div class="p-md space-y-1">
+<h5 class="font-callout text-on-surface line-clamp-1">Modern Interiors</h5>
+<p class="text-[11px] text-on-surface-variant font-medium">Design Studio • 8 Lessons</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Favorites Section - Horizontal List -->
+<section class="mb-xxl">
+<div class="px-margin-mobile flex justify-between items-end mb-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<h3 class="font-headline-md text-on-surface">Your Favorites</h3>
+</div>
+</div>
+<div class="flex overflow-x-auto no-scrollbar gap-md px-margin-mobile">
+<!-- Favorite Card 1 -->
+<div class="flex-shrink-0 w-64 rounded-xxl overflow-hidden bg-surface-container-low border border-outline-variant/20 shadow-sm">
+<div class="h-40 relative">
+<img class="w-full h-full object-cover" data-alt="A crisp, high-end macro photograph of professional camera lenses and lighting equipment in a bright studio. Minimalist and technical yet inviting aesthetic with soft bokeh. Perfect for a photography masterclass." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMZ4xCIw7mrWpD9Dq7dik7haQx4c6sKKWeDu3g19lkM0a8tazDTd9qiUQYPHc7g_UBNUbmGgPW1uVLNBb_0n2Q5XDg7Jp8HXC3iFbH1Yc_wGFTjeWlDqOtH5LXcCzByzJLv3hFOY3Yr7NL2qcXtd6jewuhNLXH_hpJBK_xndLm3NC4m-JdVSg6mUH3lqe3rmmyd_RGyd2pNFU96_LDMPGzxPGQ37c7CIyYPZujF5-N9bsB7gTL0NN1ETQN3y1QL-Nr4XjseV2c-S8"/>
+<div class="absolute inset-0 bg-black/10"></div>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2 py-0.5 rounded-lg">
+<span class="text-[10px] font-bold text-primary uppercase">Continue</span>
+</div>
+</div>
+<div class="p-md">
+<h5 class="font-callout text-on-surface mb-1">Visual Storytelling</h5>
+<div class="w-full h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="w-3/4 h-full bg-secondary rounded-full"></div>
+</div>
+<p class="text-[10px] text-on-surface-variant mt-2">75% Complete</p>
+</div>
+</div>
+<!-- Favorite Card 2 -->
+<div class="flex-shrink-0 w-64 rounded-xxl overflow-hidden bg-surface-container-low border border-outline-variant/20 shadow-sm">
+<div class="h-40 relative">
+<img class="w-full h-full object-cover" data-alt="An abstract, high-key digital painting with fluid golden shapes and soft peach tones. Evokes creativity and inspiration. Modern, sophisticated art style that matches a premium content brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuX_ZuuJ22T4J7VsA8rnH6Mkc0V9yh2kNv_Abs_HPjk-FbAqS__LzSOBBdm3vk1N4zDlmnZVQ7C2oquPowsZ8SsxF4fdU044EyNYzuIX1hkrb4h4iAbxmrpkCcd6Sonl5fgTT2u7_0w0Zu1J1ClXUOGv0E94CffoRrfb3e3EBWqgIRsPQRnODRjVwu71kvMtgLhvsNnWrAFQvK8HnUasHgHXgDBZb7L5cvaX0hYanvCSzg0X3yQFK_5MaV1ZGvPKIWqBE5Il2PEcg"/>
+<div class="absolute top-3 right-3 text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<div class="p-md">
+<h5 class="font-callout text-on-surface mb-1">Digital Artistry</h5>
+<p class="text-[12px] text-on-surface-variant">By Sarah Chen</p>
+</div>
+</div>
+</div>
+</section>
+<!-- New Content List -->
+<section class="px-margin-mobile space-y-md">
+<h3 class="font-headline-md text-on-surface">Latest Content</h3>
+<div class="space-y-sm">
+<!-- List Item 1 -->
+<div class="flex items-center gap-md p-2 pr-4 bg-surface-container-lowest rounded-xl sun-kissed-shadow hover:scale-[1.01] transition-transform cursor-pointer">
+<img class="w-20 h-20 rounded-lg object-cover" data-alt="A clean, minimalist portrait of a confident professional woman in a bright, modern office setting. High-quality corporate lifestyle photography with soft, flattering lighting and a warm color temperature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpiswPFdu43-Yxay_F8mTORYw_pFoJ_w0Ixzz2JNxEBc1isJURNEeUNvGRhSQaBLHrcK3nA4KbN19EULy-ZWXedbXII0p_0G3Ca3GhMW749GKaXpI09oE8XKh8jAv6tFja9v3gwiRWqezvEigr8c30VwBLL_Ul9i-Ugsgu6jcn-7wS4vV_K1OX8Xq4eXB2NJz6zEmahOsIl3rAuAJ6QtsWyeuQI7fPhr36TwWhukpIQeTOG5oXhbmi4DD4alI4-ByA-0U97ts6_Mc"/>
+<div class="flex-1 min-w-0">
+<p class="text-[10px] font-bold text-secondary uppercase">Leadership</p>
+<h5 class="font-callout text-on-surface truncate">Leading with Empathy</h5>
+<p class="text-[12px] text-on-surface-variant">25 mins • Audio Only</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant">play_circle</span>
+</div>
+<!-- List Item 2 -->
+<div class="flex items-center gap-md p-2 pr-4 bg-surface-container-lowest rounded-xl sun-kissed-shadow hover:scale-[1.01] transition-transform cursor-pointer">
+<img class="w-20 h-20 rounded-lg object-cover" data-alt="Close-up of a high-end physical fitness setup with designer weights and a minimalist yoga mat in a sunlit home gym. Crisp, clean, and optimistic vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6E_0xgYgnPpmd6pFVHxFOx8XL-MKZOKRYYSni8mD3zbc5oC_cAsVxpmL0musEsPAkEM4uHsAPeiZX7Y6z7PQ6zLBT4D_lJOTxPRD0n7SpRmZlunsStqnBgPofnJfgYd_DnXwRwIEc5FQ-R1j4cf6cl1hvwczcil251qWTTtVvadX51xkeT079OpwiqnAbYx-tcfX-TSAA0DLENz2g-wD-pqqqadFBcXQ6R0osbBxDw7XAY-m5XKn80AYCKctENekqA-jCr1dphJ4"/>
+<div class="flex-1 min-w-0">
+<p class="text-[10px] font-bold text-tertiary uppercase">Performance</p>
+<h5 class="font-callout text-on-surface truncate">Functional Strength 101</h5>
+<p class="text-[12px] text-on-surface-variant">40 mins • HD Video</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant">play_circle</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface-container-lowest shadow-[0_-8px_30px_0_rgba(255,184,0,0.10)] rounded-t-xl border-t border-outline-variant">
+<!-- Library (Active) -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">video_library</span>
+<span class="font-label-md text-label-md">Library</span>
+</a>
+<!-- Favorites -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-label-md text-label-md">Favorites</span>
+</a>
+<!-- Settings -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</nav>
+<!-- FAB (Suppressed as per rules for Details/Settings, but this is a main Library/Dashboard) -->
+<button class="fixed bottom-24 right-margin-mobile w-14 h-14 bg-tertiary text-on-tertiary rounded-full shadow-lg flex items-center justify-center z-40 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<script>
+        // Micro-interactions for scrolling
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                header.classList.remove('shadow-lg');
+                return;
+            }
+            if (currentScroll > lastScroll) {
+                // Scrolling down - hide slightly or change appearance
+                header.style.transform = 'translateY(-5px)';
+                header.style.opacity = '0.98';
+            } else {
+                // Scrolling up
+                header.style.transform = 'translateY(0)';
+                header.style.opacity = '1';
+                header.classList.add('shadow-md');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Simple click feedback for category chips
+        document.querySelectorAll('nav button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('nav button').forEach(b => {
+                    b.className = "px-lg py-2.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-lg whitespace-nowrap hover:bg-surface-variant transition-colors active:scale-95";
+                });
+                this.className = "px-lg py-2.5 rounded-full bg-primary text-on-primary font-label-lg whitespace-nowrap shadow-sm transition-all active:scale-95";
+            });
+        });
+    </script>
+</body></html>

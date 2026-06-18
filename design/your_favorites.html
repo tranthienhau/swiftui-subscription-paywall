@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Favorites - Radiant Life</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#ffba20",
+                    "surface": "#fdf9f3",
+                    "secondary-container": "#fd7958",
+                    "secondary-fixed": "#ffdad2",
+                    "tertiary": "#15686c",
+                    "surface-container-highest": "#e6e2dc",
+                    "surface-tint": "#7c5800",
+                    "on-secondary-fixed-variant": "#862208",
+                    "on-surface": "#1c1c18",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#ffb4a2",
+                    "surface-variant": "#e6e2dc",
+                    "on-surface-variant": "#514532",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "background": "#fdf9f3",
+                    "on-error": "#ffffff",
+                    "primary": "#7c5800",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#89d1d5",
+                    "tertiary-fixed-dim": "#8ad3d7",
+                    "outline": "#837560",
+                    "primary-fixed-dim": "#ffba20",
+                    "surface-container-low": "#f7f3ed",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#ebe8e2",
+                    "on-primary-fixed": "#271900",
+                    "on-tertiary-fixed-variant": "#004f53",
+                    "inverse-on-surface": "#f4f0ea",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#3c0700",
+                    "on-background": "#1c1c18",
+                    "inverse-surface": "#31302d",
+                    "on-secondary-container": "#6e1500",
+                    "on-primary-container": "#6b4c00",
+                    "primary-fixed": "#ffdea8",
+                    "outline-variant": "#d5c4ab",
+                    "secondary": "#a7391e",
+                    "primary-container": "#ffb800",
+                    "on-tertiary-container": "#005b5f",
+                    "on-tertiary-fixed": "#002021",
+                    "surface-container": "#f1ede7",
+                    "tertiary-fixed": "#a6eff3",
+                    "surface-bright": "#fdf9f3",
+                    "surface-dim": "#dddad4",
+                    "on-primary-fixed-variant": "#5e4200",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "md": "16px",
+                    "xl": "32px",
+                    "xs": "8px",
+                    "sm": "12px",
+                    "base": "4px",
+                    "lg": "24px",
+                    "gutter-mobile": "16px",
+                    "xxl": "48px"
+            },
+            "fontFamily": {
+                    "label-lg": ["Inter"],
+                    "callout": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "body-md": ["Inter"],
+                    "display": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-lg": ["13px", {"lineHeight": "18px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "callout": ["16px", {"lineHeight": "21px", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["17px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+                    "body-md": ["15px", {"lineHeight": "21px", "fontWeight": "400"}],
+                    "display": ["34px", {"lineHeight": "41px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sun-kissed-shadow {
+            box-shadow: 0 4px 20px 0 rgba(255, 184, 0, 0.05);
+        }
+        .glass-card {
+            background: rgba(255, 251, 245, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(131, 117, 96, 0.1);
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-40 bg-surface dark:bg-on-surface shadow-[0_4px_20px_0_rgba(255,184,0,0.05)] flex justify-between items-center px-margin-mobile py-md">
+<div class="flex items-center gap-sm">
+<button class="active:scale-95 transition-transform text-primary dark:text-primary-fixed">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-display text-display text-primary dark:text-primary-fixed text-[24px]">Favorites</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img class="w-full h-full object-cover" data-alt="A professional close-up portrait of a serene woman in her late 30s with a warm, welcoming smile. The lighting is bright and natural, as if from a sun-drenched window, highlighting the high-end minimalist lifestyle aesthetic. She is wearing a soft, beige linen shirt against a clean, off-white interior background with a touch of greenery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByxTm0QzoliPjEt89ruBU7RYPuDXhqVJ-gyM9t35jZ8v_JdJaFsvIb1fO5oeS5y7bckbfoI16ELq4f8r5tYpOpoBGEyhaqCOb8mPwMqBpELvJonfbMF4iUwSoVs515UMCPCV3A7adkfNZ7l2LEIxS-paM6aNvRQShp9gJw-KK0io2C4xgXMcRZ0if4XteuysFI2qZmayOn4E3_JnmSg8eNGwQnjrdHu1ntKzLeD_R6f1CWrQrj7PRxux2Y48VqPwTODMbs5BAJOUs"/>
+</div>
+</header>
+<main class="min-h-screen pb-32">
+<!-- Search Section -->
+<section class="px-margin-mobile pt-lg pb-md">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors" data-icon="search">search</span>
+<input class="w-full h-14 pl-12 pr-4 bg-surface-container-low border-none rounded-xl font-body-md focus:ring-2 focus:ring-primary-container transition-all placeholder:text-on-surface-variant/50" placeholder="Search your favorites..." type="text"/>
+</div>
+</section>
+<!-- Category Filter Chips (Micro-interaction) -->
+<section class="px-margin-mobile mb-xl overflow-x-auto">
+<div class="flex gap-xs pb-2">
+<button class="px-lg py-xs rounded-full bg-primary text-on-primary font-label-md transition-all active:scale-95 whitespace-nowrap">All Items</button>
+<button class="px-lg py-xs rounded-full bg-surface-container-high text-on-surface-variant font-label-md hover:bg-surface-variant transition-all active:scale-95 whitespace-nowrap">Wellness</button>
+<button class="px-lg py-xs rounded-full bg-surface-container-high text-on-surface-variant font-label-md hover:bg-surface-variant transition-all active:scale-95 whitespace-nowrap">Leadership</button>
+<button class="px-lg py-xs rounded-full bg-surface-container-high text-on-surface-variant font-label-md hover:bg-surface-variant transition-all active:scale-95 whitespace-nowrap">Mindfulness</button>
+</div>
+</section>
+<!-- Favorites Content: Asymmetric Bento-ish Grid -->
+<section class="px-margin-mobile grid grid-cols-2 gap-gutter-mobile" id="favorites-grid">
+<!-- Item 1: Large Featured-style card -->
+<div class="col-span-2 rounded-[24px] overflow-hidden glass-card sun-kissed-shadow relative group cursor-pointer active:scale-[0.98] transition-all">
+<div class="aspect-[16/9] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A peaceful aerial shot of a sun-drenched coastal retreat surrounded by lush greenery and calm turquoise waters. The lighting is warm and radiant, evoking a sense of tranquility and high-end wellness. The aesthetic is clean and minimalist, using a palette of soft whites, deep teals, and sunny yellow highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADonhTiMdK010qaEs1iPZcuGEigb3HPzHtVCQ3Du5r1pv6graxZ1_N9zkZmrZNr6QGmuNbsLGFALqgSQxJOYSr3-c8o7IehN05XO3Cp3BlIfpYgqaCtFzqt6c07tJfRUYz8i-_W5v-gmnJoWL9e1SnjMpAziVqkUvUe_S9vnSInNScasd5YlmZDYxhVqvrfvMG2gKE4KYUNPvI5jKYjxw3zrKYv6-0x93MJ3BfyYJrEhO67cghyAJFTP6b5ly7O8Z11jWe4g-AhKQ"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur rounded-full p-2 text-secondary shadow-sm">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<div class="p-lg">
+<div class="flex items-center gap-xs mb-base">
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-sm py-0.5 rounded-full font-label-md text-[10px]">Wellness</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Morning Radiance Routine</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-1">A curated guide to starting your day with intention and clarity.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="col-span-1 flex flex-col gap-md">
+<div class="rounded-[24px] overflow-hidden glass-card sun-kissed-shadow group cursor-pointer active:scale-[0.98] transition-all">
+<div class="aspect-square relative">
+<img class="w-full h-full object-cover" data-alt="Close-up of a person's hands holding a warm ceramic mug in a bright, minimalist modern kitchen. Soft morning sunlight streams through a nearby window, casting long, gentle shadows. The scene is cozy and premium, featuring natural wood textures and a clean, sunny color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtO6Qg1E_R6g9mwuioIv0K1UTrh1j4gCnWK0JO6qNSZ7oMx_kxe4fjaVSmzLp6C9IPVrzWdWcQ8ucc32JIgttBe0dqp7HdA9-xC_JmUHWE9N3PgRJAROqEF_LrOgVdOQA_yw0u9j0Io7XPY--PKlrDTZmONRTFh6WQuo3YUmQEt-s8Q7kIssXQNJpBV5-dIVfZFyeGx1eHcSAvSRhNdiJT7-gqnHapnd0vEeF5y8H1HNKAjXt1s-ffNzV9HScatGPQf6g_m17p0Sg"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur rounded-full p-1.5 text-secondary">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<div class="p-md">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-sm py-0.5 rounded-full font-label-md text-[10px] mb-xs inline-block">Mindfulness</span>
+<h3 class="font-callout text-callout text-on-surface text-sm">Quiet Focus Mastery</h3>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="col-span-1 flex flex-col gap-md">
+<div class="rounded-[24px] overflow-hidden glass-card sun-kissed-shadow group cursor-pointer active:scale-[0.98] transition-all">
+<div class="aspect-square relative">
+<img class="w-full h-full object-cover" data-alt="A clean, organized workspace with a high-end laptop, a sleek notebook, and a small potted plant under bright, warm lighting. The aesthetic is professional and airy, dominated by warm whites and subtle gold accents, suggesting a high-performance leadership environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtpdtrd7NqXzzZkxx7q5oizIGA1-Ei-qwvRNgew1RMoxyk01ed1aGwyEW7S6yOz-Yotld0uL4qY79_9F7MzF5B_TY56x0kH-TprSgIwII3FoXSBsrRWyBQQKijZVFWPm3ZO3EStvYIkcXffDXbKSlMJ0ojqrSXiRpTW8wbuQ331x8NFXNVDUMKWuNkB5zzheXlOJmx_NqPaE8y-EisI5v_Fug_k8WjxWr_NN1D30K6BqQWTg6gWqTCQLD4DdYjYhg8K6pCxbnXN5M"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur rounded-full p-1.5 text-secondary">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<div class="p-md">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-sm py-0.5 rounded-full font-label-md text-[10px] mb-xs inline-block">Leadership</span>
+<h3 class="font-callout text-callout text-on-surface text-sm">Empathetic Strategy</h3>
+</div>
+</div>
+</div>
+<!-- Empty State (Hidden by default, shown via JS if needed) -->
+<div class="hidden col-span-2 py-xxl flex flex-col items-center text-center animate-in fade-in slide-in-from-bottom-4 duration-700" id="empty-state">
+<div class="w-32 h-32 mb-lg bg-surface-container-high rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-[48px]" data-icon="subscriptions">subscriptions</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">No favorites yet</h3>
+<p class="font-body-md text-on-surface-variant max-w-[240px]">Your favorite workshops will appear here as you save them.</p>
+<button class="mt-xl h-14 px-xxl bg-primary text-on-primary rounded-full font-callout active:scale-95 transition-all shadow-lg shadow-primary/20">Explore Workshops</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-margin-mobile pb-lg pt-md bg-surface dark:bg-on-surface shadow-[0_-4px_20px_0_rgba(255,184,0,0.05)] rounded-t-[24px]">
+<!-- Library -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-xs hover:bg-surface-container-high dark:hover:bg-surface-variant rounded-full active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="subscriptions">subscriptions</span>
+<span class="font-label-md text-label-md">Library</span>
+</a>
+<!-- Favorites (Active) -->
+<a class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-full px-lg py-xs active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-md text-label-md">Favorites</span>
+</a>
+<!-- Settings -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-xs hover:bg-surface-container-high dark:hover:bg-surface-variant rounded-full active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</nav>
+<script>
+        // Simple search filtering logic for demonstration
+        const searchInput = document.querySelector('input');
+        const gridItems = document.querySelectorAll('#favorites-grid > div:not(#empty-state)');
+        const emptyState = document.getElementById('empty-state');
+
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            let visibleCount = 0;
+
+            gridItems.forEach(item => {
+                const title = item.querySelector('h3')?.textContent.toLowerCase() || '';
+                const category = item.querySelector('span')?.textContent.toLowerCase() || '';
+                
+                if (title.includes(term) || category.includes(term)) {
+                    item.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            if (visibleCount === 0) {
+                emptyState.classList.remove('hidden');
+                emptyState.classList.add('flex');
+            } else {
+                emptyState.classList.add('hidden');
+                emptyState.classList.remove('flex');
+            }
+        });
+
+        // Micro-interaction for individual heart buttons
+        document.querySelectorAll('.material-symbols-outlined[data-icon="favorite"]').forEach(heart => {
+            heart.parentElement.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isFilled = heart.style.fontVariationSettings.includes("'FILL' 1");
+                heart.style.fontVariationSettings = isFilled ? "'FILL' 0" : "'FILL' 1";
+                heart.classList.toggle('text-secondary', !isFilled);
+                heart.classList.toggle('text-outline', isFilled);
+            });
+        });
+    </script>
+</body></html>

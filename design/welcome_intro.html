@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Premium Onboarding</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#271900",
+                    "surface-container": "#f1ede7",
+                    "tertiary-fixed": "#a6eff3",
+                    "primary-fixed": "#ffdea8",
+                    "background": "#fdf9f3",
+                    "surface-container-high": "#ebe8e2",
+                    "primary-container": "#ffb800",
+                    "inverse-surface": "#31302d",
+                    "surface-tint": "#7c5800",
+                    "on-secondary-container": "#6e1500",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e6e2dc",
+                    "on-background": "#1c1c18",
+                    "surface-dim": "#dddad4",
+                    "on-secondary-fixed-variant": "#862208",
+                    "on-tertiary-fixed-variant": "#004f53",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#005b5f",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1c1c18",
+                    "surface-container-highest": "#e6e2dc",
+                    "tertiary-container": "#89d1d5",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#6b4c00",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#5e4200",
+                    "tertiary-fixed-dim": "#8ad3d7",
+                    "inverse-on-surface": "#f4f0ea",
+                    "primary": "#7c5800",
+                    "surface-container-low": "#f7f3ed",
+                    "primary-fixed-dim": "#ffba20",
+                    "on-secondary-fixed": "#3c0700",
+                    "secondary": "#a7391e",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#15686c",
+                    "inverse-primary": "#ffba20",
+                    "outline": "#837560",
+                    "surface": "#fdf9f3",
+                    "surface-bright": "#fdf9f3",
+                    "secondary-container": "#fd7958",
+                    "secondary-fixed": "#ffdad2",
+                    "on-surface-variant": "#514532",
+                    "outline-variant": "#d5c4ab",
+                    "secondary-fixed-dim": "#ffb4a2",
+                    "on-tertiary-fixed": "#002021"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "lg": "24px",
+                    "gutter-mobile": "16px",
+                    "xs": "8px",
+                    "md": "16px",
+                    "margin-mobile": "20px",
+                    "xl": "32px",
+                    "xxl": "48px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "display": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "callout": ["Inter"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "display": ["34px", {"lineHeight": "41px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["17px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-md": ["15px", {"lineHeight": "21px", "fontWeight": "400"}],
+                    "label-lg": ["13px", {"lineHeight": "18px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "callout": ["16px", {"lineHeight": "21px", "fontWeight": "600"}],
+                    "headline-lg": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sun-kissed-shadow {
+            box-shadow: 0 4px 20px 0 rgba(255, 184, 0, 0.05);
+        }
+        .sun-kissed-shadow-lg {
+            box-shadow: 0 8px 30px 0 rgba(255, 184, 0, 0.10);
+        }
+        .glass-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Anchor (Shared Component Proxy) -->
+<header class="w-full top-0 sticky z-40 bg-surface flex justify-between items-center px-margin-mobile py-sm sun-kissed-shadow">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl active:scale-95 duration-200 cursor-pointer">arrow_back</span>
+</div>
+<div class="font-display text-headline-md font-extrabold text-primary">
+            Premium Content
+        </div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl active:scale-95 duration-200 cursor-pointer">account_circle</span>
+</div>
+</header>
+<main class="min-h-[calc(100vh-140px)] px-margin-mobile pt-lg pb-xxl flex flex-col items-center max-w-lg mx-auto">
+<!-- Video/VSL Placeholder Section -->
+<div class="relative w-full aspect-video rounded-[24px] overflow-hidden sun-kissed-shadow-lg group cursor-pointer border border-outline-variant/30 mb-xl transition-transform duration-500 active:scale-[0.98]">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, high-end lifestyle video frame featuring a young professional meditating in a sun-drenched, minimalist loft. Soft morning light floods the room through floor-to-ceiling windows, highlighting warm wood textures and lush indoor plants. The atmosphere is serene and radiant, utilizing a soft orange and sunny yellow color palette to evoke optimism. The style is premium, airy, and inviting, perfectly capturing a moment of personal growth and mental clarity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdzJio10yk-3B1_qJbZuC3CdUsF8kjuW-pw7_9Zciia55MiNawFIYbS7KqgJWYdJZ0JhMSJ1l2Fgd_bFgncM3rmNTscWZ5YSODQMHWGAgMF0LPo89zdm8iWswp7_c76SI4PD3TfxqcY6Kj1eY_aZLAeh8mDTezCpuZWiLIqvSGvC5EOrDjOl5en7ot7-0RKnLpe-HwKWZJdNfr4exyucq8f3sQys_T_0DGhemYUCaJyhlKKc371MYel47pk6wNlQTU2jMZn1cOrTc')"></div>
+<!-- Play Interaction Overlay -->
+<div class="absolute inset-0 flex items-center justify-center z-20">
+<div class="w-20 h-20 bg-primary-container/90 rounded-full flex items-center justify-center glass-blur sun-kissed-shadow transition-all duration-300 group-hover:scale-110 group-hover:bg-primary-container">
+<span class="material-symbols-outlined text-on-primary-container text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<!-- Badge -->
+<div class="absolute top-4 right-4 z-20 bg-secondary-container/90 text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md flex items-center gap-1 glass-blur">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                INTRO
+            </div>
+</div>
+<!-- Typography Content -->
+<div class="text-center space-y-md mb-xxl">
+<h1 class="font-display text-display text-on-surface leading-tight">
+                Unlock Your <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Potential</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[320px] mx-auto px-4">
+                Access exclusive insights and high-end workshops designed for your premium lifestyle.
+            </p>
+</div>
+<!-- Feature Bento-ish Highlights -->
+<div class="grid grid-cols-2 gap-md w-full mb-xxl">
+<div class="bg-surface-container-low p-md rounded-[24px] border border-outline-variant/20 sun-kissed-shadow">
+<div class="w-10 h-10 bg-primary-container/20 rounded-xl flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<p class="font-callout text-callout text-on-surface mb-xs">Expert Led</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Top-tier curated mentorship.</p>
+</div>
+<div class="bg-surface-container-low p-md rounded-[24px] border border-outline-variant/20 sun-kissed-shadow">
+<div class="w-10 h-10 bg-tertiary-container/20 rounded-xl flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<p class="font-callout text-callout text-on-surface mb-xs">Daily Flows</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Radiant habits for every day.</p>
+</div>
+</div>
+<!-- Action Button -->
+<div class="w-full space-y-md mt-auto">
+<button class="w-full h-[56px] bg-[#005F63] hover:bg-[#004f53] text-white rounded-full font-callout text-callout shadow-lg transition-all duration-300 active:scale-95 flex items-center justify-center gap-2 group">
+                Continue to Premium
+                <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<p class="text-center font-label-md text-label-md text-outline">
+                Already a member? <span class="text-primary font-bold cursor-pointer hover:underline">Log in</span>
+</p>
+</div>
+</main>
+<!-- Bottom Navigation Shell (Shared Component) -->
+<!-- Suppressed based on "The Destination Rule": This is an onboarding/transactional flow -->
+<script>
+        // Micro-interactions for button and interactive elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const primaryBtn = document.querySelector('button');
+            primaryBtn.addEventListener('click', () => {
+                // Haptic feedback simulation
+                primaryBtn.classList.add('opacity-80');
+                setTimeout(() => primaryBtn.classList.remove('opacity-80'), 150);
+                console.log('Navigating to Paywall...');
+            });
+
+            // Smooth entrance animations
+            const elements = document.querySelectorAll('main > div');
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = `all 0.6s cubic-bezier(0.22, 1, 0.36, 1) ${index * 0.1}s`;
+                
+                requestAnimationFrame(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body></html>
